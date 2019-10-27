@@ -1,0 +1,15 @@
+# ignore egginfo file
+ulmo.egg-info/
+
+# ignore build, dist dir
+dist/
+build/
+
+# ignore sphinx build dir
+docs/_build/
+
+# ignore compiled python files
+*.pyc
+
+# Ignore checkpoints created (especially for the examples)
+.ipynb_checkpoints
