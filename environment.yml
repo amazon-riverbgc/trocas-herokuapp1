@@ -7,8 +7,8 @@ dependencies:
   - ipykernel
   - pandas=0.25.1
   - geopandas=0.5.1
-  #- descartes
-  #- mapclassify
+  - descartes
+  - mapclassify
   - openpyxl
   - xlrd
   - cachey
@@ -19,7 +19,7 @@ dependencies:
   # holoviz packages
   - colorcet=2.0.1
   - datashader=0.7.0
-  #- geoviews=1.6.3
+  - geoviews=1.6.3
   - holoviews=1.12.5
   - hvplot=0.4.0
   - panel=0.6.2
