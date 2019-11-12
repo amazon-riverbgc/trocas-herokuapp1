@@ -12,4 +12,4 @@ docs/_build/
 *.pyc
 
 # Ignore checkpoints created (especially for the examples)
-.ipynb_checkpoints
+.ipynb_checkpoints/
