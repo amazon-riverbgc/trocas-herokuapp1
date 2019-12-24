@@ -17,21 +17,20 @@ ADD ./environment.yml /tmp/environment.yml
 # EM: Could hardwire a conda env name here
 RUN conda env create -f /tmp/environment.yml
 
-# EM: It's setting up a "defacult conda env"
+# EM: It's setting up a "default conda env"
 
 # do some conda magic
-ENV PATH /opt/conda/envs/holoviztrocas_panelapp/bin:$PATH
 ENV CONDA_DEFAULT_ENV holoviztrocas_panelapp
-ENV CONDA_PREFIX /opt/conda/envs/holoviztrocas_panelapp
+ENV PATH /opt/conda/envs/$CONDA_DEFAULT_ENV/bin:$PATH
+ENV CONDA_PREFIX /opt/conda/envs/$CONDA_DEFAULT_ENV
 RUN echo $PATH
 # This is run just as a manual verification
 RUN conda env list
 
 # Add our code
 ADD . /opt/apps
-WORKDIR /opt/apps
 #ADD ./apps /opt/apps
-#WORKDIR /opt/apps
+WORKDIR /opt/apps
 
 # Expose is NOT supported by Heroku
 # EXPOSE 5006
