@@ -7,7 +7,8 @@ RUN apt-get update && apt-get install -y \
   libgl1-mesa-glx
 
 # update conda to latest version
-RUN conda update conda
+# 3/13/2020: Changed from: RUN conda update conda
+RUN conda update -n base -c defaults conda
 
 # Grab conda environment file
 # Conda channels are specified in this env file

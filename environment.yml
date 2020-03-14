@@ -17,6 +17,7 @@ dependencies:
   - fastparquet
   - python-snappy
   # holoviz packages
+  - bokeh=1.4
   - colorcet=2.0.1
   - datashader=0.7.0
   - geoviews=1.6.3
