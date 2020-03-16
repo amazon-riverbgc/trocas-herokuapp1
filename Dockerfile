@@ -15,13 +15,11 @@ RUN conda update -n base -c defaults conda
 ADD ./environment.yml /tmp/environment.yml
 
 # Install Conda packages
+ENV CONDA_DEFAULT_ENV trocaspanelapp
 # EM: Could hardwire a conda env name here
-RUN conda env create -f /tmp/environment.yml
+RUN conda env create --name $CONDA_DEFAULT_ENV -f /tmp/environment.yml
 
-# EM: It's setting up a "default conda env"
-
-# do some conda magic
-ENV CONDA_DEFAULT_ENV holoviztrocas_panelapp
+# Set up a "default conda env"
 ENV PATH /opt/conda/envs/$CONDA_DEFAULT_ENV/bin:$PATH
 ENV CONDA_PREFIX /opt/conda/envs/$CONDA_DEFAULT_ENV
 RUN echo $PATH
