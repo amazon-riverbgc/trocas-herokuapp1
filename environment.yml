@@ -5,8 +5,8 @@ channels:
 dependencies:
   - python=3.7
   - ipykernel
-  - pandas=0.25.1
-  - geopandas=0.5.1
+  - pandas=0.25
+  - geopandas
   - descartes
   - mapclassify
   - openpyxl
@@ -18,10 +18,10 @@ dependencies:
   - python-snappy
   # holoviz packages
   - bokeh=1.4
-  - colorcet=2.0.1
-  - datashader=0.7.0
-  - geoviews=1.6.3
-  - holoviews=1.12.5
-  - hvplot=0.4.0
-  - panel=0.6.2
-  - param=1.9.1
+  - colorcet=2.0
+  - datashader=0.7
+  - geoviews=1.6
+  - holoviews=1.12
+  - hvplot=0.5
+  - panel=0.7
+  - param=1.9
