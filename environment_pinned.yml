@@ -1,0 +1,27 @@
+name: holoviztrocas_panelapp
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7
+  - ipykernel
+  - pandas=0.25
+  - geopandas
+  - descartes
+  - mapclassify
+  - openpyxl
+  - xlrd
+  - cachey
+  - marshmallow
+  - webargs
+  - fastparquet
+  - python-snappy
+  # holoviz packages
+  - bokeh=1.4
+  - colorcet=2.0
+  - datashader=0.7
+  - geoviews=1.6
+  - holoviews=1.12
+  - hvplot=0.5
+  - panel=0.7
+  - param=1.9
