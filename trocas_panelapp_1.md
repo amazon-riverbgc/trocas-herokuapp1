@@ -1,5 +1,5 @@
 # Notes from `trocas_panelapp_1.ipynb`
-- 9/12/2020
+- 9/13-12/2020
 - Bugs, long-term to-dos, update history, etc
 - Complements - See https://github.com/amazon-riverbgc/TROCAS/blob/master/AppTODOs.md
 
@@ -171,6 +171,12 @@ def mbdata_points_tr_map(ds, sensor_val, obs_param_label):
 
     # return ds.opts(color=obs_param)
     return ds.opts(color=obs_param)
+```
+
+### logz (log-scale colormap)
+I'm not getting this to work with `logz=use_logscale.param.value` or `logz=use_logscale.value`:
+```python
+use_logscale = pn.widgets.Checkbox(name='Use Log scale', value=False)
 ```
 
 #### BUG, 3/15/2020
