@@ -3,21 +3,15 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.7
+  - python
   - ipykernel
   - pandas
   - geopandas
   - descartes
-  - mapclassify
-  - openpyxl
   - xlrd
-  - cachey
-  - marshmallow
-  - webargs
   - fastparquet
   - python-snappy
   # holoviz packages
-  # - bokeh=1.4
   - bokeh
   - colorcet
   - datashader

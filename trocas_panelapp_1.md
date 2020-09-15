@@ -1,5 +1,5 @@
 # Notes from `trocas_panelapp_1.ipynb`
-- 9/13-12/2020
+- 9/15-12/2020
 - Bugs, long-term to-dos, update history, etc
 - Complements - See https://github.com/amazon-riverbgc/TROCAS/blob/master/AppTODOs.md
 
@@ -65,13 +65,13 @@ myplot.opts(clipping_colors=clipping)
 
 ## Rasterize and spread all-TROCAS points as gray-scale background
 
-- **4/20/2020: Currently all this code is commented out because of error I ran into starting in mid November 2019.**
 - http://holoviews.org/releases.html
-
-```python
-# SPREAD background points
-rasterized_postds2 = rasterize(mbdata_points, aggregator=ds.count())
-```
+- **4/20/2020: Currently all this code is commented out because of error I ran into starting in mid November 2019.**
+    ```python
+    # SPREAD background points
+    rasterized_postds2 = rasterize(mbdata_points, aggregator=ds.count())
+    ```
+- See also `holoviz_rasterize_issues_versions.odt`
 
 ### Old conda env, `holoviztrocas_panelapp` ("older" holoviz versions)
 - `rasterized_postds2` generates a bokeh/holoviews image, and `print(rasterized_postds2)` results in:
@@ -174,10 +174,13 @@ def mbdata_points_tr_map(ds, sensor_val, obs_param_label):
 ```
 
 ### logz (log-scale colormap)
-I'm not getting this to work with `logz=use_logscale.param.value` or `logz=use_logscale.value`:
-```python
-use_logscale = pn.widgets.Checkbox(name='Use Log scale', value=False)
-```
+- I'm not getting this to work with `logz=use_logscale.param.value` or `logz=use_logscale.value`:
+    ```python
+    use_logscale = pn.widgets.Checkbox(name='Use Log scale', value=False)
+    ```
+- Using `.opts(logz=True`) on an early iteration of the mapped point data (likely shaded/rasterized) did not work
+- Note from a [2019-11 comment online](http://bebi103.caltech.edu.s3-website-us-east-1.amazonaws.com/2019a/content/recitations/recitation_05/overplotting.html#Datashader): "HoloViews currently cannot display datashaded plots with a log axis, so we have to manually compute the logarithms for the data set."
+
 
 #### BUG, 3/15/2020
 
