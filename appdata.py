@@ -6,7 +6,6 @@ import pandas as pd
 import geopandas as gpd
 
 import holoviews as hv
-import geoviews as gv
 
 
 TROCAS_BASEPATH = Path('./')
@@ -30,6 +29,8 @@ def get_mbdata(Points, holoviewsmapping=False):
         mb_points = Points(mb_df, kdims=['longitude', 'latitude']) #, vdims=['date_time'])
         mb_points = hv.Dataset(mb_points)
     else:
+        import geoviews as gv
+        
         mb_points = Points(mb_df, kdims=['longitude', 'latitude']) #, vdims=['date_time'])
         mb_points = gv.Dataset(gv.operation.project_points(mb_points))
     
