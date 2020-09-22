@@ -60,11 +60,15 @@ def create_dielcollections(Points, mb_df, save_to_excel=False):
         londeg_max=('londeg', 'max'),
         latdeg_min=('latdeg', 'min'),
         latdeg_max=('latdeg', 'max'),
+        # date_time_mean=('date_time', 'mean'), # DataError: No numeric types to aggregate
         date_time_min=('date_time', 'min'),
         date_time_max=('date_time', 'max')
     )
 
     mbdata_dielcoll_pts_df = mbdata_dielcoll_df.groupby(['filename_lico', 'filename_sond']).agg(**agg_dct)
+    # See https://stackoverflow.com/questions/58306309/pandas-timedelta-mean-returns-error-no-numeric-types-to-aggregate-why
+    datetime_mean_df = mbdata_dielcoll_df.groupby(['filename_lico', 'filename_sond'])[['date_time']].mean(numeric_only=False)
+    mbdata_dielcoll_pts_df = mbdata_dielcoll_pts_df.join(datetime_mean_df)
     mbdata_dielcoll_pts_df.reset_index(inplace=True)
 
     # **NOTE: Save to Excel file for examination as needed. BUT THIS SHOULDN'T BE HAPPENING EVERY TIME THIS APP IS RUN!! 
