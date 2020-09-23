@@ -1,6 +1,6 @@
-# 3/21/2020. Emilio Mayorga, https://github.com/emiliom
+# 9/23, 3/21/2020. Emilio Mayorga, https://github.com/emiliom
 # For strategies to make the docker image / heroku slug size smaller,
-# refer to https://github.com/emiliom/herokuapp1/issues/2
+# refer to https://github.com/amazon-riverbgc/trocas-herokuapp1/issues/2
 
 FROM continuumio/miniconda3
 
