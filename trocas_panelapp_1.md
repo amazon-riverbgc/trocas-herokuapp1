@@ -1,5 +1,5 @@
 # Notes from `trocas_panelapp_1.ipynb`
-- 9/15-12/2020
+- 9/22,15-12/2020
 - Bugs, long-term to-dos, update history, etc
 - Complements - See https://github.com/amazon-riverbgc/TROCAS/blob/master/AppTODOs.md
 
@@ -50,13 +50,7 @@ import datashader.geo
 x, y = datashader.geo.lnglat_to_meters(most_severe.longitude, most_severe.latitude)
 ```
 
-
-### colormap and color range limit customizations
-
-#### Setting color range limits
-Use `clim` option (or hvplot) parameter, eg: `clim=(5000, 8000)`
-
-#### Setting colormap min, max and NaN colors
+### Setting colormap min, max and NaN colors
 Use the `clipping_colors` option, like this:
 ```python
 clipping = {'min': 'red', 'max': 'green', 'NaN': 'transparent'}
@@ -66,6 +60,7 @@ myplot.opts(clipping_colors=clipping)
 ## Rasterize and spread all-TROCAS points as gray-scale background
 
 - http://holoviews.org/releases.html
+- `from holoviews.operation.datashader import rasterize, shade, spread`
 - **4/20/2020: Currently all this code is commented out because of error I ran into starting in mid November 2019.**
     ```python
     # SPREAD background points
