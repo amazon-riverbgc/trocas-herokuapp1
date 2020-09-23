@@ -109,7 +109,7 @@ def create_tr_sensorinventory():
     """Sensor inventory
     This could be extracted from mbdata_points, too.
     """
-    sensorinventory_df = pd.read_parquet(TROCAS_BASEPATH / 'data' / 'sensorinventory_df.parq', 
+    sensorinventory_df = pd.read_parquet(TROCAS_BASEPATH / 'data/inventories' / 'sensorinventory_df.parq', 
                                          engine='fastparquet')
     
     sensorinv_agg_dct = odict(
