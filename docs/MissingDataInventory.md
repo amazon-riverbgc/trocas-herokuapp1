@@ -1,4 +1,6 @@
-Listing of missing sensor files or issues with specific files. Go to the <a href="https://github.com/emiliom/TROCAS/blob/master/MissingDataInventory.md" target="_blank">`MissingDataInventory.md` markdown document on GitHub</a> to update it directly. Last update: 2020-4-20
+Listing of missing sensor files or issues with specific files. Go to the 
+<a href="https://github.com/amazon-riverbgc/trocas-herokuapp1/tree/master/docs/MissingDataInventory.md" target="_blank">`MissingDataInventory.md` markdown document on GitHub</a>
+to update it directly. Last update: 2020-4-20
 
 ### TR 1
 - 2019-8-29: **Licor** `transect01_11_2014_7.txt` has 241,474 observations, more than twice the number as the file with the next highest number. If that means it actually goes over > 24 hours, my assumption for handling the midnight roll over breaks down

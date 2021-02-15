@@ -2,7 +2,8 @@ The TROCAS Data Browser is intended to provide convenient overviews and explorat
 
 See the annotated screenshot below for usage instructions. The main component of the application is in the **Data Browser tab**. The **Inventory tab** presents an inventory table for each TROCAS transect and a list of currently known data gaps or issues that need to be addressed.
 
-This is a work in progress. Some of the enhancements currently identified for near-term implementation are <a href="https://github.com/emiliom/TROCAS/blob/master/AppTODOs.md" target="_blank">listed in this TO-DOs page</a>.
+This is a work in progress. Some of the enhancements currently identified for near-term implementation are 
+<a href="https://github.com/amazon-riverbgc/trocas-herokuapp1/tree/master/docs/AppTODOs.md" target="_blank">listed in this TO-DOs page</a>.
 
 ### TROCAS data processing
 
