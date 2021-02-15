@@ -5,7 +5,7 @@
 
 
 ## Recently completed tasks
-- 3/14. Tested with env `holoviztrocas_panelapp_latest` created today from `data/notebooks/environment.yml`.
+- 3/14/2020. Tested with env `holoviztrocas_panelapp_latest` created today from `data/notebooks/environment.yml`.
 - 3/11. Reverted to using JupyterLab 1.x, via a new conda env, `jupyterlab1`. Everything is working again, with both conda envs (`holoviztrocas_panelapp` and `holoviztrocas_panelapp_latest2`). The histogram axis-range-update fix still works.
 - 3/10. 
     - Implemented the fix to the histogram axis-range-udpate problem, using `.opts(framewise=True)`
